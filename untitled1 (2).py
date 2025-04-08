@@ -85,8 +85,7 @@ vmax = np.nanmax(all_correlations)
 for i, week_corr in enumerate(weekly_correlations):
     start_date_str = weekly_dates[i].strftime('%Y-%m-%d')
     end_date_str = weekly_dates[i + 1].strftime('%Y-%m-%d')
-    if i==26:
-      plot_correlation_heatmap(week_corr, i + 1, start_date_str, end_date_str, vmin, vmax)
+    plot_correlation_heatmap(week_corr, i + 1, start_date_str, end_date_str, vmin, vmax)
 
 best_pairs=[]
 for i, week_corr in enumerate(weekly_correlations):
